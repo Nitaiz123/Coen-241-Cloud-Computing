@@ -1,15 +1,19 @@
 FROM nityanand/ubuntu_docker
 
-COPY docker-script.sh /docker-script.sh
+COPY docker_script.sh C:/Users/Nityanand Pujari/Downloads/docker_script.sh
 
-COPY cpu-script.sh /cpu-script.sh
+COPY cpu_test.sh C:/Users/Nityanand Pujari/Downloads/cpu_test.sh
 
-COPY fileio-script.sh /fileio-script.sh
+COPY file_io_test.sh C:/UsersNityanand Pujari/Downloads/file_io_test.sh
 
-RUN chmod +x docker-script.sh
+COPY memory_test.sh C:/Users/Nityanand Pujari/Downloads/memory_test.sh
 
-RUN chmod +x cpu-script.sh
+RUN chmod +x docker_script.sh
 
-RUN chmod +x fileio-script.sh
+RUN chmod +x cpu_test.sh
 
-ENTRYPOINT bash docker-script.sh
+RUN chmod +x file_io_test.sh
+
+RUN chmod +x memory_test.sh
+
+ENTRYPOINT bash docker_script.sh
